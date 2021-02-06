@@ -8,12 +8,12 @@ Tsp is NP-hard problem, so there exist some nondeterministic solutions. This pro
 ## Genetic algorithm
 ### Fitness function
 Tsp is minimization problem because we are searcing for smallest distance. We can write fitness function like this:
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 ![first eqation](https://latex.codecogs.com/gif.latex?%5C%5BI_d%3D%5Csum%5E%7Bn-1%7D_%7Bi%3D1%7D%7BD%7D%5Cleft%28v_1%2Cv_%7B1&plus;i%7D%5Cright%29&plus;D%5Cleft%28v_%7Bn%5C%20%7D%2Cv_1%5Cright%29%5D%5C)
 
 where D is the function of distance between to vertices, calculated with this formula:
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 ![second_equation](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5C%5BD%5Cleft%28n_i%2C%5C%20%5C%20n_j%5Cright%29%3D%5Csqrt%7B%7B%5Cleft%28x_i-x_j%5Cright%29%7D%5E2&plus;%7B%5Cleft%28y_i-y_j%5Cright%29%7D%5E2%7D%5C%5D)
 
 ### Initialization of population
@@ -55,6 +55,7 @@ An appropriate balance needs to be found between the execution speed of the algo
 where the number of maximum iterations is 500 and the number of units is 200 (for some larger numbers the algorithm does not give drastically better solutions, and the execution becomes longer, so I limited myself to these values) <br />
 At program startup (**main.py**) the result of one execution is recorded in **tsp_current_result.txt** and if that result is better than the best result ever measured in previous runs, the content of the best one is automatically changed (**tsp_best_result.txt**). The following is a display of the results of running the algorithm 100 times. Each execution is started with 500 iterations and the above parameters. 
 
+![](Img/graph.png)
 
 
 
