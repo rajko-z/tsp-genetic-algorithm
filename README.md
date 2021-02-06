@@ -1,4 +1,7 @@
 # Travel salesman problem with genetic algorithm
+![](https://img.shields.io/badge/travel--salesman-problem-green)
+![](https://img.shields.io/badge/genetic-algorithm-green)
+
 Implementation of genetic algorithm to solve the instance of [travel salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) Berlin52.
 
 ## About problem
@@ -13,7 +16,7 @@ Tsp is minimization problem because we are searcing for smallest distance. We ca
 
 where D is the function of distance between to vertices, calculated with this formula:
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 ![second_equation](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5C%5BD%5Cleft%28n_i%2C%5C%20%5C%20n_j%5Cright%29%3D%5Csqrt%7B%7B%5Cleft%28x_i-x_j%5Cright%29%7D%5E2&plus;%7B%5Cleft%28y_i-y_j%5Cright%29%7D%5E2%7D%5C%5D)
 
 ### Initialization of population
@@ -56,6 +59,9 @@ where the number of maximum iterations is 500 and the number of units is 200 (fo
 At program startup (**main.py**) the result of one execution is recorded in **tsp_current_result.txt** and if that result is better than the best result ever measured in previous runs, the content of the best one is automatically changed (**tsp_best_result.txt**). The following is a display of the results of running the algorithm 100 times. Each execution is started with 500 iterations and the above parameters. 
 
 ![](Img/graph.png)
+
+### Conclusion
+As can be seen in the graph, the algorithm deviates on average by about **9.3%** from the correct solution, and the best found solution deviates by only **0.7%**.
 
 
 
